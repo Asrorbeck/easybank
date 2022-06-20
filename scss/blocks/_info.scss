@@ -1,0 +1,158 @@
+.info {
+    // background-color: #F4F5F7;
+    
+    &__container {
+        padding-top: 96px;
+    }
+    
+    &__heading {
+        font-family: 'Public Sans';
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.714286px;
+        color: #2D314D;
+        margin-bottom: 16px;
+    }
+    
+    &__text {
+        font-family: 'Public Sans';
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.28125px;
+        color: #9597A5;
+        max-width: 635px;
+        width: 100%;
+        margin-bottom: 72px;
+    }
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    
+    &__item {
+        position: relative;
+        max-width: 255px;
+        width: 100%;
+        height: 166px;
+        padding-top: 112px;
+        &::before {
+            top: 0;
+            left: 0;
+            position: absolute;
+            content: "";
+            display: inline-block;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-image: url('./../../img/online-banking.png');
+        }
+        &:nth-child(2)::before {
+            background-image: url('./../../img/simple-budgeting.png');
+        }
+        
+        &:nth-child(3)::before {
+            background-image: url('./../../img/fast-onboarding.png');
+        }
+        
+        &:nth-child(4)::before {
+            background-image: url('./../../img/open-api.png');
+        }
+    }
+    
+    &__item-heading {
+        margin-bottom: 26px;
+        font-family: 'Public Sans';
+        font-weight: 100;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.428571px;
+        color: #2D314D;
+    }
+    
+    &__item-text {
+        font-family: 'Public Sans';
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.25px;
+        color: #9597A5;
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+    .info {
+        &__container {
+            padding-top: 96px;
+        }
+        
+        &__heading {
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+        }
+        
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+        }
+        
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            max-width: 255px;
+            width: 100%;
+            height: 166px;
+            padding-top: 112px;
+            &::before {
+                top: 0;
+                left: 50%;
+                transform: translate(-50%);
+                position: absolute;
+                content: "";
+                display: inline-block;
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                background-image: url('./../../img/online-banking.png');
+            }
+            &:nth-child(2)::before {
+                background-image: url('./../../img/simple-budgeting.png');
+            }
+            
+            &:nth-child(3)::before {
+                background-image: url('./../../img/fast-onboarding.png');
+            }
+            
+            &:nth-child(4)::before {
+                background-image: url('./../../img/open-api.png');
+            }
+        }
+        
+        &__item-heading {
+            text-align: center;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        &__item-text {
+            text-align: center;
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
